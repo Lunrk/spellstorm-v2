@@ -38,4 +38,9 @@ export default {
       connecting: 'Connexion au serveur...',
     },
   },
+  not_found: {
+    title: 'Page non trouvée',
+    description: "La page que vous recherchez n'existe pas.",
+    back_to_home: "Retour à l'accueil",
+  },
 } satisfies typeof reference;

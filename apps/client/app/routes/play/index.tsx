@@ -1,9 +1,12 @@
+export const ssr = false;
+
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import type { Difficulty } from '@spellstorm/types/difficulty';
 import type { Mode } from '@spellstorm/types/mode';
-import { colyseus } from '~/game/.client/cllient';
+import { colyseus } from '~/game/.client/client';
+import { useRoomStore } from '~/game/.client/store';
 
 const APP_VERSION = '0.1.0';
 
@@ -21,6 +24,7 @@ const MODES: Mode[] = ['arcade'];
 export default function Play() {
     const { t } = useTranslation();
     const navigate = useNavigate();
+    const setRoom = useRoomStore((s) => s.setRoom);
 
     const [selectedMode, setSelectedMode] = useState<Mode>('arcade');
     const [selectedDiff, setSelectedDiff] = useState<Difficulty>('normal');
@@ -37,12 +41,8 @@ export default function Play() {
                 difficulty: selectedDiff,
             });
 
-            navigate('/game', {
-                state: {
-                    roomId: room.roomId,
-                    sessionId: room.sessionId,
-                },
-            });
+            setRoom(room);
+            navigate('/game');
         } catch (err) {
             setError(err instanceof Error ? err.message : 'Failed to create room');
             setIsLoading(false);

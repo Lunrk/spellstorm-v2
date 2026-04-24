@@ -1,3 +1,5 @@
+import { title } from 'process';
+
 export default {
   title: 'Spellstorm',
   description: 'The arcade spell-caster. How far will you go?',
@@ -33,5 +35,10 @@ export default {
       back: 'Back to menu',
       connecting: 'Connecting to server...',
     },
+  },
+  not_found: {
+    title: 'Page Not Found',
+    description: "The page you're looking for doesn't exist.",
+    back_to_home: 'Back to Home',
   },
 };

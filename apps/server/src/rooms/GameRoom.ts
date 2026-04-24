@@ -4,7 +4,7 @@ import type { Mode } from '@spellstorm/types/mode';
 import { GameState } from '@spellstorm/types/schemas/game';
 import { MapState } from '@spellstorm/types/schemas/map';
 import { Player } from '@spellstorm/types/schemas/player';
-import { Room, Client } from 'colyseus';
+import { Room, Client, type AuthContext } from 'colyseus';
 
 type GameMetadata = {
   mode: Mode;
@@ -22,6 +22,25 @@ export class GameRoom extends Room<{
 }> {
   // On définit le state directement comme dans ton exemple
   state = new GameState();
+
+  /* onAuth(_client: Client, _options: any, context: AuthContext) {
+    console.log('[Auth] Client tente de se connecter :', context.ip);
+    console.log('Request, Headers:', JSON.stringify(context, null, 2));
+
+    if (context.token) {
+      // TODO : Vérification du token (JWT ou autre) pour authentifier le joueur
+
+      return {
+        type: 'user',
+        user: {},
+      };
+    }
+
+    return {
+      type: 'guest',
+      ip: context.ip,
+    };
+  } */
 
   onCreate(options: any) {
     this.setMetadata({
@@ -41,7 +60,9 @@ export class GameRoom extends Room<{
     );
   }
 
-  onJoin(client: Client, options: any) {
+  onJoin(client: Client, options: any, auth: { ip: string }) {
+    console.log('[Join] Client connecté :', auth.ip);
+
     // 1. Récupération de la config selon le mode et la difficulté
     const config = getGameConfig(this.metadata.mode, this.metadata.difficulty);
 
