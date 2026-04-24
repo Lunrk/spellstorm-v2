@@ -35,7 +35,7 @@
     "@typescript/native-preview": "7.0.0-dev.20260328.1",
     "bumpp": "^11.0.1",
     "tsdown": "^0.21.7",
-    "typescript": "catalog:",
+    "typescript": "^6.0.3",
     "vitest": "^4.1.2"
   },
   "dependencies": {
