@@ -5,4 +5,5 @@ export default defineConfig({
   dts: {
     tsgo: true,
   },
+  target: 'ES2024',
 });

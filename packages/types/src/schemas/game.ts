@@ -1,12 +1,8 @@
 import { Schema, type, MapSchema } from '@colyseus/schema';
-import type { Difficulty } from '@/difficulty';
-import type { Mode } from '@/mode';
 import { MapState } from '@/schemas/map';
 
 export class GameState extends Schema {
   // --- Configuration de la session ---
-  @type('string') difficulty: Difficulty = 'normal';
-  @type('string') mode: Mode = 'arcade';
   @type('string') status: 'lobby' | 'playing' | 'gameover' = 'lobby';
 
   // --- Temps & Horloge ---

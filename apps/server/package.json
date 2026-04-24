@@ -9,6 +9,7 @@
     "node": ">= 20.9.0"
   },
   "scripts": {
+    "dev": "tsx watch src/index.ts",
     "start": "tsx watch src/index.ts",
     "loadtest": "tsx loadtest/example.ts --room my_room --numClients 2",
     "build": "npm run clean && tsc -p tsconfig.build.json",
@@ -30,10 +31,10 @@
     "mocha": "^11.7.5",
     "rimraf": "^5.0.0",
     "tsx": "^4.21.0",
-    "typescript": "^5.0.4"
+    "typescript": "catalog:"
   },
   "dependencies": {
-    "@colyseus/schema": "^4.0.0",
+    "@colyseus/schema": "^4.0.20",
     "@colyseus/tools": "^0.17.0",
     "@spellstorm/types": "workspace:*",
     "colyseus": "^0.17.6",

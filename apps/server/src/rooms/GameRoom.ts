@@ -24,9 +24,10 @@ export class GameRoom extends Room<{
   state = new GameState();
 
   onCreate(options: any) {
-    // Configuration de base de la session
-    this.metadata.mode = options.mode || 'arcade';
-    this.metadata.difficulty = options.difficulty || 'normal';
+    this.setMetadata({
+      mode: options.mode || 'arcade',
+      difficulty: options.difficulty || 'normal',
+    });
 
     // Initialisation forcée de la première map (Overworld)
     const overworld = new MapState();
@@ -36,13 +37,13 @@ export class GameRoom extends Room<{
     this.state.maps.set(overworld.id, overworld);
 
     console.log(
-      `[Room ${this.roomId}] Initialisée : ${this.state.mode} / ${this.state.difficulty}`,
+      `[Room ${this.roomId}] Initialisée : ${this.metadata.mode} / ${this.metadata.difficulty}`,
     );
   }
 
   onJoin(client: Client, options: any) {
     // 1. Récupération de la config selon le mode et la difficulté
-    const config = getGameConfig(this.state.mode, this.state.difficulty);
+    const config = getGameConfig(this.metadata.mode, this.metadata.difficulty);
 
     // 2. Création de l'entité joueur
     const player = new Player();

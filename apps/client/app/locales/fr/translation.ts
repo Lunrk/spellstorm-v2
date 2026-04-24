@@ -1,8 +1,7 @@
 import reference from '~/locales/en/translation';
 export default {
   title: 'Spellstorm',
-  description:
-    "Un jeu d'action vu de dessus où vous incarnez un sorcier combattant des hordes d'ennemis dans des donjons générés de manière procédurale.",
+  description: "Le jeu d'arcade des sorciers. Jusqu'où iras-tu ?",
   game: {
     modes: {
       arcade: {
@@ -11,22 +10,32 @@ export default {
           "Plongez directement dans l'action. Combat pur, sans progression.",
       },
       story: {
-        name: 'Story Mode',
-        description: "Follow the wizard's journey. (Login required)",
+        name: 'Mode Histoire',
+        description: 'Suivez le voyage du wizard. (Connexion requise)',
       },
     },
     difficulties: {
-      easy: { name: 'Easy', desc: 'For those who want to relax.' },
-      normal: { name: 'Normal', desc: "The way it's meant to be played." },
-      hard: { name: 'Hard', desc: 'Mistakes will be punished.' },
-      extreme: { name: 'Extreme', desc: 'Only for veterans.' },
-      demon: { name: 'Demon', desc: 'Good luck. You will need it.' },
+      easy: { name: 'Easy', desc: 'Pour ceux qui veulent se détendre.' },
+      normal: {
+        name: 'Normal',
+        desc: 'La façon dont le jeu est censé être joué.',
+      },
+      hard: { name: 'Hard', desc: 'Les erreurs seront punies.' },
+      extreme: { name: 'Extreme', desc: 'Seulement pour les vétérans.' },
+      demon: { name: 'Demon', desc: 'Bonne chance. Vous en aurez besoin.' },
     },
     actions: {
-      play_now: 'Play Now',
-      login_to_unlock: 'Login to unlock more modes',
-      select_mode: 'Select Mode',
-      select_difficulty: 'Select Difficulty',
+      play_now: 'Jouer Maintenant',
+      play: 'Jouer',
+      leaderboard: 'Classement',
+      settings: 'Paramètres',
+      coming_soon: 'Bientôt disponible',
+      login_to_unlock: 'Connectez-vous pour débloquer plus de modes',
+      select_mode: 'Sélectionner le mode',
+      select_difficulty: 'Sélectionner la difficulté',
+      quit: 'Quitter le jeu',
+      back: 'Retour au menu',
+      connecting: 'Connexion au serveur...',
     },
   },
 } satisfies typeof reference;

@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
+    "@colyseus/react": "^0.1.15",
+    "@colyseus/sdk": "^0.17.41",
     "@fontsource-variable/inter": "^5.2.8",
+    "@fontsource/cinzel": "^5.2.8",
     "@react-router/node": "7.14.0",
     "@react-router/serve": "7.14.0",
     "@spellstorm/types": "workspace:*",
@@ -50,7 +53,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "tailwindcss": "^4.2.2",
-    "typescript": "^5.9.3",
+    "typescript": "catalog:",
     "vite": "^8.0.3"
   }
 }

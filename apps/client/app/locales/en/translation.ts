@@ -1,7 +1,6 @@
 export default {
   title: 'Spellstorm',
-  description:
-    'A top-down action game where you control a wizard battling through hordes of enemies.',
+  description: 'The arcade spell-caster. How far will you go?',
   game: {
     modes: {
       arcade: {
@@ -23,9 +22,16 @@ export default {
     },
     actions: {
       play_now: 'Play Now',
+      play: 'Play',
+      leaderboard: 'Leaderboard',
+      settings: 'Settings',
+      coming_soon: 'Coming Soon',
       login_to_unlock: 'Login to unlock more modes',
       select_mode: 'Select Mode',
       select_difficulty: 'Select Difficulty',
+      quit: 'Quit game',
+      back: 'Back to menu',
+      connecting: 'Connecting to server...',
     },
   },
 };
