@@ -1,8 +1,14 @@
 import { create } from 'zustand';
-import type { Room } from '@colyseus/sdk';
+import type { Client, Room } from '@colyseus/sdk';
+import type { GameMetadata, GameState } from '@spellstorm/types/schemas/game';
+
+export type GameRoom = Room<{
+  metadata: GameMetadata;
+  state: GameState;
+}>;
 
 type RoomStore = {
-  room: Room | null;
+  room: GameRoom | null;
   setRoom: (room: Room) => void;
   clearRoom: () => void;
 };

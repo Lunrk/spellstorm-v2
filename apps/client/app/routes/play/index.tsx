@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import type { Difficulty } from '@spellstorm/types/difficulty';
 import type { Mode } from '@spellstorm/types/mode';
 import { colyseus } from '~/game/.client/client';
-import { useRoomStore } from '~/game/.client/store';
+import { useRoomStore } from '~/game/store';
 
 const APP_VERSION = '0.1.0';
 

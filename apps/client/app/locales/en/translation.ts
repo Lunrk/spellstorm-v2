@@ -41,4 +41,22 @@ export default {
     description: "The page you're looking for doesn't exist.",
     back_to_home: 'Back to Home',
   },
+  settings: {
+    sections: {
+      controls: 'Controls',
+    },
+    input_mode: {
+      title: 'Input Mode',
+      keyboard: 'Keyboard',
+      mouse: 'Mouse',
+    },
+    keybinds: {
+      title: 'Keybindings',
+      reset: 'Reset to default',
+      move_up: 'Move Up',
+      move_down: 'Move Down',
+      move_left: 'Move Left',
+      move_right: 'Move Right',
+    },
+  },
 };

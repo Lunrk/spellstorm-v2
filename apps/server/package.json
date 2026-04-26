@@ -9,7 +9,7 @@
     "node": ">= 20.9.0"
   },
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsx src/index.ts",
     "start": "tsx watch src/index.ts",
     "loadtest": "tsx loadtest/example.ts --room my_room --numClients 2",
     "build": "npm run clean && tsc -p tsconfig.build.json",
@@ -38,6 +38,7 @@
     "@colyseus/tools": "^0.17.0",
     "@spellstorm/types": "workspace:*",
     "colyseus": "^0.17.6",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "zod": "^4.3.6"
   }
 }

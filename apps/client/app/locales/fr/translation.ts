@@ -43,4 +43,22 @@ export default {
     description: "La page que vous recherchez n'existe pas.",
     back_to_home: "Retour à l'accueil",
   },
+  settings: {
+    sections: {
+      controls: 'Contrôles',
+    },
+    input_mode: {
+      title: 'Mode de contrôle',
+      keyboard: 'Clavier',
+      mouse: 'Souris',
+    },
+    keybinds: {
+      title: 'Touches',
+      reset: 'Réinitialiser',
+      move_up: 'Avancer',
+      move_down: 'Reculer',
+      move_left: 'Gauche',
+      move_right: 'Droite',
+    },
+  },
 } satisfies typeof reference;

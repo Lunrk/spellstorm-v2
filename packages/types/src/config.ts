@@ -18,35 +18,35 @@ export const GameConfigs: GameConfigs = {
   arcade: {
     easy: {
       player: {
-        base_speed: 200,
+        base_speed: 50,
         base_life: 100,
       },
     },
 
     normal: {
       player: {
-        base_speed: 200,
+        base_speed: 50,
         base_life: 100,
       },
     },
 
     hard: {
       player: {
-        base_speed: 200,
+        base_speed: 50,
         base_life: 100,
       },
     },
 
     extreme: {
       player: {
-        base_speed: 200,
+        base_speed: 50,
         base_life: 100,
       },
     },
 
     demon: {
       player: {
-        base_speed: 200,
+        base_speed: 50,
         base_life: 100,
       },
     },
